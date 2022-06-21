@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.ImageButton
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -30,13 +31,12 @@ class ListaActivity: AppCompatActivity() {
             startActivity(intencao)
         }
 
-        botao.setOnLongClickListener{
-            return@setOnLongClickListener false
+        val botaoLogout = findViewById<ImageButton>(R.id.btnLogout)
+        botaoLogout.setOnClickListener {
+            val intencao = Intent(applicationContext, LoginActivity::class.java)
+            startActivity(intencao)
         }
 
-        botao.setOnTouchListener{ view, motionEvent ->
-            return@setOnTouchListener false
-        }
     }
 
 }

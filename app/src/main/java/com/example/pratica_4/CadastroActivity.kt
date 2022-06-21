@@ -15,5 +15,10 @@ class CadastroActivity : AppCompatActivity() {
         botaoSalvar.setOnClickListener {
             finish()
         }
+
+        val botaoCancelar = findViewById<Button>(R.id.btnCancelar)
+        botaoCancelar.setOnClickListener {
+            finish()
+        }
     }
 }
